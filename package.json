@@ -1,6 +1,6 @@
 {
   "name": "baileys-elite",
-  "version": "0.0.9-beta.1",
+  "version": "1.0.1",
   "description": "WhatsApp API",
   "keywords": [
     "whatsapp",
@@ -18,14 +18,13 @@
     "url": "https://github.com/shizo-devs/baileys.git"
   },
   "license": "MIT",
-  "author": "Yugesh Singh",
+  "author": "Yugesh Singh Shizo",
   "creator": "Adhiraj Singh",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib/*",
     "WAProto/*",
-    "WASignalGroup/*.js",
     "engine-requirements.js"
   ],
   "scripts": {
@@ -35,79 +34,73 @@
     "changelog:last": "conventional-changelog -p angular -r 2",
     "changelog:preview": "conventional-changelog -p angular -u",
     "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "example": "node --inspect -r ts-node/register Example/example.ts",
-    "example:mobile": "node --inspect -r ts-node/register Example/example.ts --mobile",
-    "gen:protobuf": "sh WAProto/GenerateStatics.sh",
-    "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
-    "lint:fix": "eslint src --fix --ext .js,.ts,.jsx,.tsx",
+    "lint": "eslint src --ext .js,.ts",
+    "lint:fix": "yarn lint --fix",
     "prepack": "tsc",
-    "prepare": "tsc",
+    "preinstall": "node engine-requirements.js",
     "release": "release-it",
-    "test": "jest"
+    "test": "jest",
+    "update:version": "node scripts/update-version.js"
   },
   "dependencies": {
-    "@adiwajshing/keyed-db": "^0.2.4",
     "@hapi/boom": "^9.1.3",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@cacheable/node-cache": "1.5.3",
+    "@itsukichan/eslint-config": "^1.0.0",
+    "@itsukichan/libsignal-node": "^1.0.1",
     "async-mutex": "^0.5.0",
-    "async-lock": "^1.4.1",
-    "futoin-hkdf": "^1.5.1",
-    "audio-decode": "^2.1.3",
-    "axios": "^1.6.0",
+    "axios": "^1.12.1",
+    "audio-decode": "^2.2.2",
     "cache-manager": "^5.7.6",
-    "libphonenumber-js": "^1.10.20",
-    "libsignal": "https://github.com/shizo-devs/libsignal-node.git",
+    "fflate": "^0.8.2",
     "lodash": "^4.17.21",
+    "link-preview-js": "^3.0.14",
+    "lru-cache": "^11.1.0",
     "music-metadata": "^7.12.3",
-    "@cacheable/node-cache": "^1.4.0",
     "pino": "^9.6",
-    "protobufjs": "^6.11.3",
-    "uuid": "^10.0.0",
+    "protobufjs": "^7.2.4",
+    "qrcode-terminal": "^0.12.0",
     "ws": "^8.13.0"
   },
   "devDependencies": {
-    "@adiwajshing/eslint-config": "https://github.com/adiwajshing/eslint-config.git",
-    "@types/got": "^9.6.11",
-    "@types/jest": "^27.5.1",
+    "@types/jest": "^29.5.14",
     "@types/node": "^16.0.0",
-    "@types/sharp": "^0.29.4",
     "@types/ws": "^8.0.0",
-    "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.0.0",
-    "jest": "^27.0.6",
-    "jimp": "^0.16.1",
+    "conventional-changelog-cli": "^5.0.0",
+    "eslint": "^8.57.1",
+    "jest": "^30.1.1",
+    "jimp": "^0.22.12",
     "json": "^11.0.0",
-    "link-preview-js": "^3.0.0",
     "open": "^8.4.2",
-    "qrcode-terminal": "^0.12.0",
-    "release-it": "^15.10.3",
-    "sharp": "^0.32.6",
-    "ts-jest": "^27.0.3",
+    "release-it": "^19.0.0",
+    "ts-jest": "^29.4.1",
     "ts-node": "^10.8.1",
-    "typedoc": "^0.24.7",
-    "typescript": "^4.6.4"
+    "typedoc": "^0.27.9",
+    "typedoc-plugin-markdown": "4.4.2",
+    "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "jimp": "^0.16.1",
-    "link-preview-js": "^3.0.0",
-    "qrcode-terminal": "^0.12.0",
-    "sharp": "^0.32.6"
+    "jimp": "^0.22.12"
   },
   "peerDependenciesMeta": {
     "jimp": {
       "optional": true
-    },
-    "link-preview-js": {
-      "optional": true
-    },
-    "qrcode-terminal": {
-      "optional": true
-    },
-    "sharp": {
-      "optional": true
     }
   },
   "packageManager": "yarn@1.22.19",
-   "engines": {
-     "node": ">=20.0.0"
-   }
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "bugs": {
+    "url": "https://github.com/shizo-devs/Baileys/issues"
+  },
+  "resolutions": {
+    "glob": "^10.0.0",
+    "rimraf": "^5.0.0",
+    "uuid": "^9.0.0",
+    "querystring": "npm:qs@^6.13.0"
+  }
 }

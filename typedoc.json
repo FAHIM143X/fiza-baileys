@@ -1,9 +1,22 @@
 {
-    "entryPoints": ["./src/index.ts"],
-    "excludePrivate": true,
-    "excludeProtected": true,
+    "$schema": "https://typedoc.org/schema.json",
+    "entryPoints": [
+        "./lib/index.d.ts"
+    ],
+    "out": "./docs",
+    "plugin": [
+        "typedoc-plugin-markdown"
+    ],
+    "readme": "./README.md",
+    "includeVersion": true,
+    "entryPointStrategy": "expand",
     "excludeExternals": true,
-    "includeVersion": false,
-    "out": "docs",
-    "gaID": "G-WBY63HR4VS"
+    "excludePrivate": true,
+    "excludeProtected": false,
+    "skipErrorChecking": true,
+    "validation": {
+        "notExported": false,
+        "invalidLink": false,
+        "notDocumented": false
+    }
 }
