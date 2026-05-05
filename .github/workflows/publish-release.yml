@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: 20.x
           registry-url: "https://registry.npmjs.org"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -38,23 +40,22 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Build
-        run: yarn build:tsc
-
-      - name: Make Package
-        run: npm pack
-
-      - name: Rename Pack
-        run: mv *.tgz baileys-elite.tgz
-
-      - name: Publish to NPM
+      - name: Publish in NPM (as `baileys-elite`)
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: Publish in NPM (Baileys-elite)
+        run: |
+          npx json -I -f package.json -e "this.name='baileys-elite'"
+          npm publish --access public --//registry.npmjs.org/:_authToken=$NPM_TOKEN
+          npx json -I -f package.json -e "this.name='baileys-elite'"
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Generate Changelog
         id: generate_changelog
@@ -63,6 +64,12 @@ jobs:
           echo "changelog<<EOF" >> $GITHUB_OUTPUT
           echo "${changelog}" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Make Package
+        run: npm pack
+
+      - name: Rename Pack
+        run: mv *.tgz baileys-elite.tgz
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
