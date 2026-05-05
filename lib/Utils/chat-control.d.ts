@@ -18,7 +18,7 @@ export interface TypingOptions {
  *
  * @example
  * ```ts
- * import { createTypingIndicator } from '@innovatorssoft/baileys'
+ * import { createTypingIndicator } from 'baileys-elite'
  *
  * const typing = createTypingIndicator(
  *     (jid, presence) => sock.sendPresenceUpdate(presence, jid)

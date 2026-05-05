@@ -96,7 +96,7 @@ export declare class MessageScheduler {
  *
  * @example
  * ```ts
- * import { createMessageScheduler } from '@innovatorssoft/baileys'
+ * import { createMessageScheduler } from 'baileys-elite'
  *
  * const scheduler = createMessageScheduler(
  *     (jid, content) => sock.sendMessage(jid, content),

@@ -1,10 +1,10 @@
-# Innovatorssoft/wa-proto
+# Shizo-devs/wa-proto
 
-> Innovatorssoft/wa-proto is an open source project with extracted protobuf for 2.3000.x versions files from WhatsApp WEB based on https://github.com/innovatorssoft/Baileys/blob/main/WAProto
+> shizo-devs/wa-proto is an open source project with extracted protobuf for 2.3000.x versions files from WhatsApp WEB based on https://github.com/shizo-devs/Baileys/blob/main/WAProto
 
 ## License
 
-Copyright 2026 Innovatorssoft.
+Copyright 2026 shizo-devs.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

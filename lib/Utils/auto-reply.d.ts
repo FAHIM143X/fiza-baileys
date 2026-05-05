@@ -98,7 +98,7 @@ export declare class AutoReplyHandler {
  *
  * @example
  * ```ts
- * import { createAutoReply } from '@innovatorssoft/baileys'
+ * import { createAutoReply } from 'baileys-elite'
  *
  * const autoReply = createAutoReply(
  *     (jid, content, opts) => sock.sendMessage(jid, content, opts),
