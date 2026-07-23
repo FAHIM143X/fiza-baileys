@@ -1,0 +1,10 @@
+{
+  "name": "fiza-baileys",
+  "version": "1.0.0",
+  "description": "FIZA Baileys - WhatsApp Web API by FAHIM",
+  "main": "lib/index.js",
+  "type": "module",
+  "author": "FAHIM",
+  "license": "MIT",
+  "keywords": ["fiza", "whatsapp", "baileys", "bot", "fahim"]
+}
