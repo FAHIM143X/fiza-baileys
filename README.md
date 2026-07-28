@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://files.catbox.moe/kyto9u.png" width="200" alt="FIZA">
+<img src="https://files.catbox.moe/kyto9u.png" width="100%" alt="FIZA-BAILEYS">
 
 # 🎀 FIZA-BAILEYS 🎀
 
