@@ -1,24 +1,25 @@
 {
-  "name": "baileys-elite",
+  "name": "fiza-baileys",
   "version": "1.0.1",
-  "description": "WhatsApp API",
+  "description": "Fiza-Baileys - Enhanced WhatsApp Web API library",
   "keywords": [
     "whatsapp",
-    "js-whatsapp",
     "whatsapp-api",
     "whatsapp-web",
     "whatsapp-chat",
     "whatsapp-group",
     "automation",
-    "baileys-elite",
-    "multi-device"
+    "fiza-baileys",
+    "multi-device",
+    "baileys"
   ],
-  "homepage": "https://github.com/shizo-devs/baileys",
+  "homepage": "https://github.com/FAHIM143X/fiza-baileys",
   "repository": {
-    "url": "https://github.com/shizo-devs/baileys.git"
+    "type": "git",
+    "url": "https://github.com/FAHIM143X/fiza-baileys.git"
   },
   "license": "MIT",
-  "author": "Yugesh Singh Shizo",
+  "author": "fahim",
   "creator": "Adhiraj Singh",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -95,12 +96,13 @@
     "lib": "lib"
   },
   "bugs": {
-    "url": "https://github.com/shizo-devs/Baileys/issues"
+    "url": "https://github.com/fahim/Baileys/issues"
   },
   "resolutions": {
     "glob": "^10.0.0",
     "rimraf": "^5.0.0",
     "uuid": "^9.0.0",
     "querystring": "npm:qs@^6.13.0"
-  }
+  },
+  "maintainer": "Fahim / FAHIM143X"
 }
