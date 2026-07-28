@@ -1,4 +1,12 @@
-<div align="center"><img src="https://raw.githubusercontent.com/FAHIM143X/fiza/main/fizamedia/pictures/fiza.jpg" width="180" alt="FIZA">🎀 FIZA-BAILEYS 🎀
+<div align="center">
+
+<img src="https://files.catbox.moe/kyto9u.png" width="200" alt="FIZA">
+
+# 🎀 FIZA-BAILEYS 🎀
+
+### ✨ A Cute & Powerful WhatsApp Web API Library ✨
+
+</div>
 
 ✨ A Cute & Powerful WhatsApp Web API Library ✨
 
